@@ -26,9 +26,83 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: jekyll-theme-conference
+# theme: minima
+remote_theme: "DigitaleGesellschaft/jekyll-theme-conference@v3.6.3"
 plugins:
-  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+conference:
+  lang: "en"
+  tz: "+5:00"
+  navigation:
+    links:
+      - name: Overview
+        relative_url: /
+      - name: Submissions
+        menu:
+          - name: Full Papers
+            relative_url: /submissions/full-papers/
+          - name: Short Papers
+            relative_url: /submissions/short-papers/
+          - name: Workshops and Tutorials
+            relative_url: /submissions/workshops/
+          - name: Late Breaking Reports
+            relative_url: /submissions/lbr/
+      - name: Attending
+        menu:
+          - name: Registration
+            relative_url: /attending/registration/
+          - name: Venue Information
+            relative_url: /attending/venue/
+          - name: Code of Conduct
+            relative_url: /attending/code-of-conduct/
+      - name: Program
+        menu:
+          - name: Keynote and Lectures
+            relative_url: /program/keynotes/
+          - name: Schedule
+            relative_url: /program/schedule/
+          - name: Awards
+            relative_url: /program/awards/
+          - name: Industry Day
+            relative_url: /program/industry-day/
+      - name: Partners
+        relative_url: /partners/
+      - name: Organizers
+        relative_url: /organizers/
+
+
+
+collections:
+  talks:
+    output: true
+    permalink: /:collection/:title/
+  speakers:
+    output: true
+    permalink: /:collection/:title/
+  rooms:
+    output: true
+    permalink: /:collection/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+  - scope:
+      path: ""
+      type: speakers
+    values:
+      layout: speaker
+  - scope:
+      path: ""
+      type: rooms
+    values:
+      layout: room
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
