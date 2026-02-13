@@ -39,6 +39,10 @@ conference:
   secondary_color: '#2d7ab9'    # Lighter blue
   link_color: '#074'            # Link color
   navigation:
+    logo:
+      name: HRI 2027
+      img: 'old_hri_logo_square.png'
+      url: '/'
     links:
       - name: Overview
         relative_url: /
