@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Late Breaking Reports
+---
+# Late Breaking Reports
 ---
 ### Important Dates
 PLACEHOLDER

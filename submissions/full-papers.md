@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Full Papers
+---
+# Full Papers
 ---
 ## Important Dates
 

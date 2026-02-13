@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Short Contributions
+---
+# Short Contributions
 ---
 
 ### Important Dates
