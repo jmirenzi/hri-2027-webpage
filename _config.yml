@@ -35,6 +35,9 @@ plugins:
 conference:
   lang: "en"
   tz: "+5:00"
+  primary_color: '#1a5490'      # Deep blue
+  secondary_color: '#2d7ab9'    # Lighter blue
+  link_color: '#074'            # Link color
   navigation:
     links:
       - name: Overview
@@ -67,6 +70,8 @@ conference:
             relative_url: /program/awards/
           - name: Industry Day
             relative_url: /program/industry-day/
+          - name: Workshops and Tutorials Program
+            relative_url: /program/workshops/
       - name: Partners
         relative_url: /partners/
       - name: Organizers

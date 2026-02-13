@@ -1,0 +1,33 @@
+---
+---
+
+$fa-font-path: "{{ site.baseurl }}/assets/webfonts";
+
+// Define your custom colors BEFORE importing the theme
+$primary: #1a5490;            // Deep blue for HRI
+$secondary: #2d7ab9;        // Lighter blue
+$success: #28a745;            // Green
+$info: #17a2b8;                 // Cyan
+$warning: #ffc107;            // Yellow
+$danger: #dc3545;             // Red
+
+// Import the conference theme (this pulls in the remote theme's SCSS)
+@import "conference";
+
+// Add any additional custom CSS below
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: $primary;
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+    }
+}
