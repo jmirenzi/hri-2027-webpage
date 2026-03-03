@@ -3,24 +3,45 @@
 
 $fa-font-path: "{{ site.baseurl }}/assets/webfonts";
 
-// Define your custom colors BEFORE importing the theme
-$primary: #1a5490;            // Deep blue for HRI
-$secondary: #2d7ab9;        // Lighter blue
-$success: #28a745;            // Green
-$info: #17a2b8;                 // Cyan
-$warning: #ffc107;            // Yellow
-$danger: #dc3545;             // Red
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+// Custom color variables
+$pink: #f2a0b3;
+$yellow-orange: #f5c518;
+$dark-blue: #2b5c8a;
+
+// Custom font variables
+$font-family-base: 'Roboto Mono', monospace;
+$font-family-headings: 'Roboto Mono', monospace;
+
+// Map to Bootstrap color variables
+$primary: $dark-blue;        // Main color (navigation, headers, buttons)
+$secondary: $pink;           // Secondary accents
+$warning: $yellow-orange;    // Highlights, warnings
+$success: #28a745;          // Keep green for success messages
+$info: $pink;                // Info boxes
+$danger: #dc3545;           // Keep red for errors
 
 // Import the conference theme (this pulls in the remote theme's SCSS)
-@import "conference";
+// @import "conference";
+
+body {
+  font-family: $font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headings;
+  font-weight: 700;
+}
 
 // Add any additional custom CSS below
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
-    color: $primary;
+h1, h2, h3 {
+  color: $dark-blue;
 }
 
 .btn-primary {
