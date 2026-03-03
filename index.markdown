@@ -1,7 +1,7 @@
 ---
 layout: home
 header:
-    img: "main_logo_square.png"
+    img: "logo.png"
 ---
 
 # HRI 2027: HRI *PLACEHOLDER*
