@@ -22,12 +22,12 @@ title: "HRI 2027 Conference"
 email: "jmirenzi@cmu.edu"
 description: >- # this means to ignore newlines until "baseurl:"
   The Human-Robot Interaction 2027 Conference website.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jmirenzi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/hri-2027-webpage" # the subpath of your site, e.g. /blog
 
 # Build settings
 # theme: minima
-remote_theme: "DigitaleGesellschaft/jekyll-theme-conference@v3.6.3"
+remote_theme: "DigitaleGesellschaft/jekyll-theme-conference@v4.0.1"
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
