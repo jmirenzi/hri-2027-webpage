@@ -22,8 +22,8 @@ title: "HRI 2027 Conference"
 email: "jmirenzi@cmu.edu"
 description: >- # this means to ignore newlines until "baseurl:"
   The Human-Robot Interaction 2027 Conference website.
-url: "https://jmirenzi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/hri-2027-webpage" # the subpath of your site, e.g. /blog
+url: "https://hri2027.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
 # theme: minima
