@@ -1,6 +1,0 @@
-remote_theme: ""
-theme: jekyll-theme-conference
-
-
-plugins:
-  - jekyll-include-cache

@@ -27,7 +27,8 @@ baseurl: "/hri-2027-webpage" # the subpath of your site, e.g. /blog
 
 # Build settings
 # theme: minima
-remote_theme: "DigitaleGesellschaft/jekyll-theme-conference@v4.0.1"
+# remote_theme: "DigitaleGesellschaft/jekyll-theme-conference@v4.0.1"
+theme: jekyll-theme-conference
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
