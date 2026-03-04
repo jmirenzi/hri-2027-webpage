@@ -3,9 +3,7 @@ layout: default
 ---
 # Workshops and Tutorials
 ---
-
-
-### Important Dates
+## Important Dates
 - Submission of proposals: PLACEHOLDER
 - Notification of acceptance: PLACEHOLDER
 - Workshop website URL due: PLACEHOLDER
@@ -17,7 +15,7 @@ Each year, the HRI conference highlights a particular theme. For HRI 2027, the t
 
 Organisers may propose for their HRI 2027 tutorial or workshop to be offered fully in-person fashion.  Organisers must commit that at least one organiser will hence attend in person to facilitate the in-person activities.  Tutorials and workshops will be held in the 1-2 days before the main conference program sessions. Submission instructions for organizers are below.
 
-### Workshops
+## Workshops
 Workshops are an opportunity for participants to meet other members of the HRI community, to discuss problems and to present their ideas around a common topic. The workshops can be half-day or full-day, and can cover any topic relevant to HRI research, design, methodologies, or education. Interdisciplinary approaches are particularly welcome.
 
 Given increasing numbers of workshop proposals each year, and a desire to host the maximum number of exciting workshops possible, we encourage organisers to consider proposing a half-day workshop in the first instance. Full-day proposals will still be considered, but should well-motivate why a full day is necessary to deliver on the overall workshop aims.
@@ -45,7 +43,7 @@ Please submit the following information (up to 3 pages including references):
 - Plan for documenting the workshop.
 - A 150 – 250 word abstract suitable for advertising the workshop in HRI 2027.
 
-### Tutorials
+## Tutorials
 Tutorials are an opportunity for dissemination of community knowledge, where participants can get “up to speed” on important topics for the field. Example topics could be - state-of-the-art overviews of particular HRI areas, hands-on programming activities with particular robot/software APIs, or design/research and data analysis methods. Interdisciplinary approaches are particularly welcome.
 
 Given increasing numbers of proposals each year, and a desire to host the maximum number of exciting events possible, we encourage organisers to consider proposing a half-day proposal in the first instance. Full-day proposals will still be considered, but should well-motivate why a full day is necessary to deliver on the overall tutorial aims.
@@ -71,7 +69,7 @@ Please submit the following information (up to 3 pages including references):
 - Links and references relevant to the tutorial.
 - A 150–250 word abstract suitable for advertising the tutorial at HRI 2027.
 
-### Submission Details
+## Submission Details
 Workshop and tutorial proposals should be no longer than 3 pages.
 
 Workshop proposals must be submitted in PDF format and conform to **ACM Proceedings specifications**. Please note that we are following the general ACM SIG format (“sigconf”, double column format), not the SIGCHI format. Templates are available at this link (US letter).
@@ -80,5 +78,5 @@ In addition, ACM has partnered with Overleaf, where you can start writing using 
 
 Workshop and tutorial proposals should be submitted via the PCS submission system. All submissions will undergo a review process by the Workshop and Tutorial Chairs plus other experts.
 
-### Contacts
+## Contacts
 PLACEHOLDER

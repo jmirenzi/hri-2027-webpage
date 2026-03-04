@@ -9,22 +9,6 @@ HRI 2027 will feature distinguished keynote speakers and invited lectures from l
 
 Keynote speakers will be announced as they are confirmed. Check back for updates.
 
-<!--
-Template for each speaker — uncomment and fill in when ready:
-
-### Speaker Name
-
-**Affiliation**
-
-![Speaker Name]({{ site.baseurl }}/assets/images/speakers/PLACEHOLDER.jpg){: style="float: right; margin-left: 1em; width: 200px;"}
-
-**Talk Title:** PLACEHOLDER
-
-**Abstract:** PLACEHOLDER
-
-**Bio:** PLACEHOLDER
--->
-
 ## Invited Lectures
 
 Details on invited lectures will be posted closer to the conference.
