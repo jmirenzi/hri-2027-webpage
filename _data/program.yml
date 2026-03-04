@@ -1,0 +1,55 @@
+days:
+
+  - name: Tuesday
+    abbr: Tue
+    date: 2027-03-16
+    rooms:
+      - name: Auditorium A
+        talks:
+          - name: Opening Ceremony
+            time_start: "8:30"
+            time_end: "9:00"
+          - name: "Talk A"
+            time_start: "9:00"
+            time_end: "17:00"
+
+      - name: Auditorium B
+        talks:
+          - name: Talk B
+            time_start: "8:00"
+            time_end: "17:30"
+
+  - name: Wednesday
+    abbr: Wed
+    date: 2027-03-17
+    rooms:
+      - name: Auditorium A
+        talks:
+          - name: "Talk A"
+            time_start: "9:00"
+            time_end: "17:00"
+
+      - name: Auditorium B
+        talks:
+          - name: Talk B
+            time_start: "8:00"
+            time_end: "17:30"
+
+  - name: Thursday
+    abbr: Thu
+    date: 2027-03-18
+    rooms:
+      - name: Auditorium A
+        talks:
+          - name: "Talk A"
+            time_start: "9:00"
+            time_end: "17:00"
+          - name: Closing Ceremony
+            time_start: "17:00"
+            time_end: "18:00"
+
+      - name: Auditorium B
+        talks:
+          - name: Talk B
+            time_start: "8:00"
+            time_end: "17:30"
