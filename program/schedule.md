@@ -1,7 +1,6 @@
 ---
-layout: default
----
-# Schedule
+layout: program
+title: Schedule
 ---
 
-### Schedule at a Glance
+The full conference schedule will be posted here once the program is finalized.
