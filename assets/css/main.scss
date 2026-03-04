@@ -16,7 +16,7 @@
 $fa-font-path: "{{ site.baseurl }}/assets/webfonts";
 
 // Import Google Font
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD@8..144,-10..0,25..151,100..900,-200..150&display=swap');
 
 // // Custom font variables
 $font-family-base: 'Roboto Mono', monospace;
@@ -67,87 +67,86 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     background-color: var(--hri-blue) !important;
 
-    .navbar-brand,
-    .nav-link,
-    .dropdown-toggle {
+    .navbar-brand, .nav-link, .dropdown-toggle {
         color: rgba(255, 255, 255, 0.9) !important;
-
-        &:hover,
-        &:focus {
-            color: var(--hri-orange) !important;
-        }
-
-        &.active {
-            color: var(--hri-orange) !important;
-            font-weight: 600;
-        }
+        &:hover, &:focus { color: var(--hri-orange) !important; }
+        &.active         { color: var(--hri-orange) !important; font-weight: 600; }
     }
 
     .navbar-toggler {
         border-color: rgba(255, 255, 255, 0.3);
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
+        .navbar-toggler-icon { filter: invert(1); }
     }
 
     .dropdown-menu {
         border-top: 3px solid var(--hri-pink);
-
         .dropdown-item {
-            &:hover,
-            &:focus {
-                background-color: rgba(var(--hri-pink-rgb), 0.1);
-                color: var(--hri-pink);
-            }
-
-            &.active {
-                background-color: var(--hri-pink);
-                color: white;
-            }
+        &:hover, &:focus { background-color: rgba(var(--hri-pink-rgb), 0.1); color: var(--hri-pink); }
+        &.active         { background-color: var(--hri-pink); color: white; }
         }
     }
 }
 
 
+
 /* ============================================================
-    Home / Hero section
- ============================================================ */
+    Variable Font Hero Title
+============================================================ */
+
+.hero-title {
+    cursor: pointer;
+    line-height: 1.15;
+}
+
+/* Each word is a block-level span that transitions font axes smoothly */
+.vf-word {
+    display: block;
+    font-family: 'Roboto Flex', sans-serif;
+    transition: font-variation-settings 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: font-variation-settings;
+}
+
+/* Color variants — maps the color name from front matter to brand palette */
+.line-pink   { color: var(--hri-pink);   }
+.line-blue   { color: var(--hri-blue);   }
+.line-orange,
+.line-yellow { color: var(--hri-orange); }
+
+[data-bs-theme="dark"] .line-blue { color: #a8c4e0; }
+
+
+/* ============================================================
+    Home card
+============================================================ */
 
 .bg-body-tertiary {
     border-left: 25px solid var(--hri-pink);
     border-bottom: 20px solid var(--hri-orange);
 }
 
-/* Hero call-to-action buttons */
 .btn-outline-primary {
-    --bs-btn-color:                var(--hri-blue);
+    --bs-btn-color:        var(--hri-blue);
     --bs-btn-border-color: var(--hri-blue);
-    --bs-btn-hover-bg:         var(--hri-blue);
-    --bs-btn-hover-color:    white;
-
+    --bs-btn-hover-bg:     var(--hri-blue);
+    --bs-btn-hover-color:  white;
     &:nth-child(2n) {
-        --bs-btn-color:                var(--hri-pink);
+        --bs-btn-color:        var(--hri-pink);
         --bs-btn-border-color: var(--hri-pink);
-        --bs-btn-hover-bg:         var(--hri-pink);
-        --bs-btn-hover-color:    white;
+        --bs-btn-hover-bg:     var(--hri-pink);
+        --bs-btn-hover-color:  white;
     }
 }
 
 
 /* ============================================================
     Headings
- ============================================================ */
+============================================================ */
 
-h1, h2 {
-    color: var(--hri-blue);
-}
+h1:not(.hero-title), h2 { color: var(--hri-blue); }
 
-[data-bs-theme="dark"] h1,
-[data-bs-theme="dark"] h2 {
-    color: var(--hri-orange);
-}
+[data-bs-theme="dark"] h1:not(.hero-title),
+[data-bs-theme="dark"] h2 { color: var(--hri-orange); }
 
-/* Section divider rule under h2 */
 h2::after {
     content: "";
     display: block;
@@ -156,6 +155,63 @@ h2::after {
     background: var(--hri-pink);
     margin-top: 0.4rem;
 }
+
+/* ============================================================
+    Hero — variable font animated blocks
+    The key: blocks are display:inline-block (fit-content width),
+    so they automatically resize as font-variation-settings change.
+============================================================ */
+
+.hri-hero { padding: 2rem 0 2.5rem; }
+
+.hri-hero__meta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--hri-blue);
+    margin-bottom: 1.2rem;
+}
+[data-bs-theme="dark"] .hri-hero__meta { color: var(--hri-orange); }
+
+.hri-hero__blocks {
+    position: relative;
+    height: clamp(200px, 32vw, 380px);
+}
+
+.hri-hero__block {
+    position: absolute;
+    display: inline-block;   /* FIT-CONTENT: grows/shrinks with text */
+    padding: 0.9em 0.5em;
+    line-height: 1;
+}
+
+.hri-hero__block--yellow {
+    background-color: var(--hri-orange);
+    left: 0;
+    top: 0;
+}
+.hri-hero__block--pink {
+    background-color: var(--hri-pink);
+    left: 40%;
+    top: 39.25%;
+}
+[data-bs-theme="dark"] .hri-hero__block--yellow { background-color: var(--hri-orange); }
+[data-bs-theme="dark"] .hri-hero__block--pink   { background-color: var(--hri-pink); }
+
+.hri-hero__word {
+    display: block;
+    font-family: 'Roboto Flex', 'Arial', sans-serif;
+    font-size: clamp(2.8rem, 8vw, 8rem);
+    color: #1a1a1a;
+    white-space: nowrap;
+    /* CSS handles smooth interpolation between axis states */
+    transition: font-variation-settings 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: font-variation-settings;
+}
+
+.hero-title { cursor: pointer; line-height: 1.15; }
 
 
 /* ============================================================
@@ -211,10 +267,6 @@ h2::after {
     Footer accent
  ============================================================ */
 
-footer {
-    border-top: 3px solid var(--hri-blue);
-}
 
-[data-bs-theme="dark"] footer {
-    border-top-color: var(--hri-orange);
-}
+footer { border-top: 3px solid var(--hri-blue); }
+[data-bs-theme="dark"] footer { border-top-color: var(--hri-orange); }

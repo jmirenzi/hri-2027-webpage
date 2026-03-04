@@ -1,27 +1,20 @@
 ---
 layout: home
+title: HRI 2027
 header:
-    img: "logo.png"
+  vf_words:
+    - text: Empowering
+      color: orange
+    - text: Society
+      color: pink
+links:
+  - name: Call for Papers
+    relative_url: /submissions/full-papers/
+  - name: Program
+    relative_url: /program/schedule/
 ---
+{% include hero-graphic.html %}
+The **ACM/IEEE International Conference on Human-Robot Interaction** is the premier venue for HRI research, bringing together researchers from robotics, HCI, AI, human factors, and the social and behavioral sciences.
 
-# HRI 2027: HRI *PLACEHOLDER*
+**HRI 2027** will be held **March 16–19, 2027** in **San Jose, CA, USA**.
 
-The ACM/IEEE International Conference on Human-Robot Interaction (HRI) is the premier venue for innovations on human-robot interaction. Sponsored by the ACM special interest groups on computer-human interaction (SIGCHI) and artificial intelligence (SIGAI) as well as the IEEE robotics and automation society (RAS), HRI brings together researchers spanning robotics, human-computer interaction, human factors, artificial intelligence, engineering, and social and behavioral sciences.
-
----
-
-## Key Dates
-
-| Submission Type | Deadline |
-|-----------------|----------|
-| Abstract Submissions | September 20nd, 2026 |
-| Full Paper Submissions | September 27th, 2026 |
-| Acceptance Notification | December 1st, 2026 |
-| Camera-Ready Deadline | PACEHOLDER |
-| Conference Dates | PLACEHOLDER |
-
----
-
-## Conference Theme
-
-PLACEHOLDER
