@@ -31,9 +31,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+/* Narrower container = more whitespace on sides */
+.container { max-width: 1080px; }   /* default is up to 1320px at large breakpoints */
+
 /* ============================================================
-    HRI 2027 — Brand Colors
-    Change these three values to update the entire site palette.
+HRI 2027 — Brand Colors
+Change these three values to update the entire site palette.
 ============================================================ */
 
 :root {
@@ -61,8 +64,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ============================================================
-    Navbar
+Navbar
 ============================================================ */
+
+/* Navbar link size */
+.navbar .nav-link,
+.navbar .navbar-brand { font-size: 1.0rem; }
 
 .navbar {
     background-color: var(--hri-blue) !important;
