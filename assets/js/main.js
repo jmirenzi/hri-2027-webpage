@@ -17,14 +17,14 @@
     document.documentElement.setAttribute('data-bs-theme', theme);
     localStorage.setItem(STORAGE_KEY, theme);
     const btn = document.getElementById('hri-theme-toggle');
-    if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    if (btn) btn.textContent = theme === 'dark' ? '☀' : '⏾';
   }
 
   function injectButton() {
     const btn = document.createElement('button');
     btn.id = 'hri-theme-toggle';
     btn.setAttribute('aria-label', 'Toggle dark mode');
-    btn.textContent = getTheme() === 'dark' ? '☀️' : '🌙';
+    btn.textContent = getTheme() === 'dark' ? '☀' : '⏾';
     btn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-bs-theme');
       applyTheme(current === 'dark' ? 'light' : 'dark');
