@@ -1,9 +1,14 @@
 ---
-layout: default
-title: Venue Information
+layout: location
+title: Conference Venue
+hide: false
+map:
+  default_zoom: 18
+  home_coord: 37.33296865962353, -121.88914882137048
+  map_provider: "OpenStreetMap.Mapnik"
 ---
 
-HRI 2027 will be held at **PLACEHOLDER** in **PLACEHOLDER, PA, USA**.
+HRI 2027 will be held at **Signia by Hilton San Jose** at 170 S Market St, San Jose, CA 95113.
 
 ## Conference Venue
 
