@@ -41,6 +41,12 @@ conference:
   # secondary_color: '#f5c518'    # Yellow Orange
   # # secondary_color: '#2d7ab9'    # Lighter blue
   link_color: '#074'            # Link color
+  talks:
+    tracks:
+      - name: Track A
+        color: danger        # → pink (--hri-pink via your CSS override)
+      - name: Track B
+        color: primary       # → blue
   navigation:
     logo:
       name: HRI 2027
@@ -83,6 +89,7 @@ conference:
         relative_url: /partners/
       - name: Organizers
         relative_url: /organizers/
+
 
 
 
