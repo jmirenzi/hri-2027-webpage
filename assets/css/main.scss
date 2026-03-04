@@ -1,54 +1,220 @@
 ---
 ---
+// // Custom color variables
+// $pink: #f2a0b3;
+// $yellow-orange: #f5c518;
+// $dark-blue: #2b5c8a;
+
+// // Map to Bootstrap color variables
+// $primary: $dark-blue;                // Main color (navigation, headers, buttons)
+// $secondary: $pink;                     // Secondary accents
+// $warning: $yellow-orange;        // Highlights, warnings
+// $success: #28a745;                    // Keep green for success messages
+// $info: $pink;                                // Info boxes
+// $danger: #dc3545;                     // Keep red for errors
 
 $fa-font-path: "{{ site.baseurl }}/assets/webfonts";
 
 // Import Google Font
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
-// Custom color variables
-$pink: #f2a0b3;
-$yellow-orange: #f5c518;
-$dark-blue: #2b5c8a;
-
-// Custom font variables
+// // Custom font variables
 $font-family-base: 'Roboto Mono', monospace;
 $font-family-headings: 'Roboto Mono', monospace;
 
-// Map to Bootstrap color variables
-$primary: $dark-blue;        // Main color (navigation, headers, buttons)
-$secondary: $pink;           // Secondary accents
-$warning: $yellow-orange;    // Highlights, warnings
-$success: #28a745;          // Keep green for success messages
-$info: $pink;                // Info boxes
-$danger: #dc3545;           // Keep red for errors
-
-// Import the conference theme (this pulls in the remote theme's SCSS)
-// @import "conference";
-
 body {
-  font-family: $font-family-base;
+    font-family: $font-family-base;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-headings;
-  font-weight: 700;
+    font-family: $font-family-headings;
+    font-weight: 700;
 }
 
-// Add any additional custom CSS below
+/* ============================================================
+    HRI 2027 — Brand Colors
+    Change these three values to update the entire site palette.
+============================================================ */
+
+:root {
+    --hri-pink:                 #f2a0b3;
+    --hri-pink-rgb:         242, 160, 179;
+    --hri-blue:                 #2b5c8a;
+    --hri-blue-rgb:         43, 92, 138;
+    --hri-orange:             #f5c518;
+    --hri-orange-rgb:     245, 197, 24;
+
+    /* Override Bootstrap primary → dark blue */
+    --bs-primary:                         var(--hri-blue);
+    --bs-primary-rgb:                 var(--hri-blue-rgb);
+    --bs-link-color:                    var(--hri-pink);
+    --bs-link-color-rgb:            var(--hri-pink-rgb);
+    --bs-link-hover-color:        var(--hri-orange);
+}
+
+/* Dark mode overrides */
+[data-bs-theme="dark"] {
+    --bs-link-color:                var(--hri-orange);
+    --bs-link-color-rgb:        var(--hri-orange-rgb);
+    --bs-link-hover-color:    var(--hri-pink);
+}
+
+
+/* ============================================================
+    Navbar
+============================================================ */
+
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--hri-blue) !important;
+
+    .navbar-brand,
+    .nav-link,
+    .dropdown-toggle {
+        color: rgba(255, 255, 255, 0.9) !important;
+
+        &:hover,
+        &:focus {
+            color: var(--hri-orange) !important;
+        }
+
+        &.active {
+            color: var(--hri-orange) !important;
+            font-weight: 600;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.3);
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+    }
+
+    .dropdown-menu {
+        border-top: 3px solid var(--hri-pink);
+
+        .dropdown-item {
+            &:hover,
+            &:focus {
+                background-color: rgba(var(--hri-pink-rgb), 0.1);
+                color: var(--hri-pink);
+            }
+
+            &.active {
+                background-color: var(--hri-pink);
+                color: white;
+            }
+        }
+    }
 }
 
-h1, h2, h3 {
-  color: $dark-blue;
+
+/* ============================================================
+    Home / Hero section
+ ============================================================ */
+
+.bg-body-tertiary {
+    border-left: 25px solid var(--hri-pink);
+    border-bottom: 20px solid var(--hri-orange);
 }
 
-.btn-primary {
-    background-color: $primary;
-    border-color: $primary;
+/* Hero call-to-action buttons */
+.btn-outline-primary {
+    --bs-btn-color:                var(--hri-blue);
+    --bs-btn-border-color: var(--hri-blue);
+    --bs-btn-hover-bg:         var(--hri-blue);
+    --bs-btn-hover-color:    white;
+
+    &:nth-child(2n) {
+        --bs-btn-color:                var(--hri-pink);
+        --bs-btn-border-color: var(--hri-pink);
+        --bs-btn-hover-bg:         var(--hri-pink);
+        --bs-btn-hover-color:    white;
+    }
+}
+
+
+/* ============================================================
+    Headings
+ ============================================================ */
+
+h1, h2 {
+    color: var(--hri-blue);
+}
+
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2 {
+    color: var(--hri-orange);
+}
+
+/* Section divider rule under h2 */
+h2::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    background: var(--hri-pink);
+    margin-top: 0.4rem;
+}
+
+
+/* ============================================================
+    Program schedule — track colors mapped to brand palette
+============================================================ */
+
+/* Keynote talks get the orange accent */
+.border-warning-subtle { border-color: var(--hri-orange) !important; }
+.border-primary-subtle { border-color: var(--hri-blue) !important; }
+.border-danger-subtle    { border-color: var(--hri-pink) !important; }
+
+
+/* ============================================================
+    Dark mode toggle button (injected by main.js)
+============================================================ */
+
+#hri-theme-toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 2px solid var(--hri-orange);
+    background: var(--hri-blue);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: background 0.2s, border-color 0.2s;
 
     &:hover {
-        background-color: darken($primary, 10%);
+        background: var(--hri-pink);
+}
+}
+
+[data-bs-theme="dark"] #hri-theme-toggle {
+        background: var(--hri-blue);
+        color: var(--hri-blue);
+
+    &:hover {
+        background: var(--hri-pink);
+        color: white;
     }
+}
+
+
+/* ============================================================
+    Footer accent
+ ============================================================ */
+
+footer {
+    border-top: 3px solid var(--hri-blue);
+}
+
+[data-bs-theme="dark"] footer {
+    border-top-color: var(--hri-orange);
 }
